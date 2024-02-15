@@ -1,0 +1,1 @@
+with recursive cte as ( select 1 as cnt union all select cnt + 1 as cnt from cte where cnt < 20 ) select repeat('* ', cnt) from cte;
